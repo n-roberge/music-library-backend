@@ -1,10 +1,11 @@
 function productValidate(req, res, next){
     let product = req.body;
     let properties = [
-        { name: "name", type: "string" },
-        { name: "description", type: "string" },
-        { name: "category", type: "string" },
-        { name: "price", type: "number" },
+        { name: "title", type: "string" },
+        { name: "album", type: "string" },
+        { name: "artist", type: "string" },
+        { name: "genre", type: "string" },
+        { name: "releaseDate", type: "date" },
     ];
 
     for (const property of properties) {
@@ -14,7 +15,7 @@ function productValidate(req, res, next){
         ) {
             continue;
         } else {
-            return res.status(403).send(`Product body not valid!`);
+            return res.status(403).send(`Song body not valid!`);
         }
     }
     return next();
