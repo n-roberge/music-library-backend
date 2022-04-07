@@ -5,7 +5,7 @@ function productValidate(req, res, next){
         { name: "album", type: "string" },
         { name: "artist", type: "string" },
         { name: "genre", type: "string" },
-        { name: "releaseDate", type: "date" },
+        { name: "releaseDate", type: "string" },
     ];
 
     for (const property of properties) {
